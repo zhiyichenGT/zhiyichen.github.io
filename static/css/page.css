@@ -54,17 +54,59 @@
   display: inline-block;
   border-bottom: 1px solid #333333;
 }
-h1 {font-size: 18px;}
-h2 {font-size: 16px;}
-h3 {font-size: 14px;}
-h4 {font-size: 12px;}
-h5 {font-size: 8px;}
-h6 {font-size: 6px;}
-
-p {
-    margin-bottom: 12px;
-    font-size: 14px;
+.page-search #search-input {
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 2px solid #eaeaea;
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
 }
+.page-search h1 {
+  padding: 12px 0;
+}
+.page-search h1 span {
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.page-search h1 img {
+  display: inline-block;
+  width: 21px;
+  margin-left: 8px;
+  vertical-align: middle;
+  opacity: 0;
+}
+.page-search .list-search li {
+  list-style: disc;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.page-search .list-search a {
+  display: block;
+  border-bottom: 1px dashed #ccc;
+}
+.page-search .list-search .title {
+  display: inline-block;
+  word-break: break-all;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #999;
+}
+.page-search .list-search .content {
+  display: block;
+  font-size: 14px;
+  color: #5a5a5a;
+  word-break: break-all;
+  padding: 10px 0;
+}
+.page-search .list-search .hint {
+  font-size: inherit;
+  font-weight: bold;
+  color: #ff7f7f;
+}
+
 @media screen and (max-width: 560px) {
   .list-post > h2 {
     padding: 10px 0;

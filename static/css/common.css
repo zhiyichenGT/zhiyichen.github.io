@@ -121,14 +121,14 @@ input:-webkit-autofill {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 .header .menu {
-  margin-right: -4px;
+  margin-right: -9px;
   text-align: right;
   user-select: none;
 }
 .header .menu a {
   display: inline-block;
   font-size: 16px;
-  margin: 4px 4px;
+  margin: 4px 2px;
   white-space: nowrap;
   user-select: auto;
 }

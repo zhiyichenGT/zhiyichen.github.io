@@ -106,7 +106,6 @@
   font-weight: bold;
   color: #ff7f7f;
 }
-
 @media screen and (max-width: 560px) {
   .list-post > h2 {
     padding: 10px 0;

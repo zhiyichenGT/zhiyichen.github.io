@@ -1,5 +1,5 @@
 ---
-layout: mypost
+layout: page
 title: Group members
 ---
 Shen En Chen

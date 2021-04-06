@@ -133,3 +133,11 @@
   margin-right: auto;
   width: 80%;
 }
+
+.object {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+}

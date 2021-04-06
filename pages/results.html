@@ -38,19 +38,19 @@ title: Results
     To prepare our tweets data for training, we have established a series of preprocessing procedures:
 </p>
 <ol>
-    <li>Hyperlink Removal</li>
-    <li>HTML Stripping</li>
-    <li>Hashtag Removal</li>
-    <li>Punctuation Removal</li>
-    <li>Lowercasing</li>
-    <li>Extra Newline Removal</li>
-    <li>Contraction Expansion</li>
-    <li>Mis-spelled Word Fix</li>
-    <li>Emoticon Replacement</li>
-    <li>Emoji Replacement</li>
-    <li>Stopword Removal</li>
-    <li>Special Character Pattern Removal</li>
-    <li>Special Character Removal</li>
+    <li><b>Hyperlink Removal</b>: Remove any hyperlink/URL in the tweet.</li>
+    <li><b>HTML Stripping</b>: Strip off any HTML tag and header.</li>
+    <li><b>Hashtag Removal</b>: Identify hashtags and either (1) remove the entire hashtag or (2) keep it by removing only the <i>#</i>.</li>
+    <li><b>Punctuation Removal</b>: Remove all periods, commas, question marks, exclamation marks, colons, semi-colons, hyphens, and equal signs.</li>
+    <li><b>Lowercasing</b>: Convert all letters to lowercase.</li>
+    <li><b>Extra Newline Removal</b>: Remove any newline escape character (e.g. <i>\n</i> and <i>\t</i>).</li>
+    <li><b>Contraction Expansion</b>: Use a pre-defined mapping to expand the contractions.</li>
+    <li><b>Mis-spelled Word Fix</b>: Fix words that contain at least 3 repeated consecutive letter (since no words would contain letters repeating more than 2 times consecutively).</li>
+    <li><b>Emoticon Replacement</b>: Use a pre-defined mapping to replace emotions to their names.</li>
+    <li><b>Emoji Replacement</b>: Replace emojis with their names using <a href="https://pypi.org/project/emoji/"emoji</a> library.</li>
+    <li><b>Stopword Removal</b>: Remove stopwords defined by <a href="https://www.nltk.org/">NLTK</a> library.</li>
+    <li><b>Special Character Pattern Removal</b>: Remove any complete pairs of parentheses, brackets, and braces.</li>
+    <li><b>Special Character Removal</b>: Keep only alphabetical and numeric characters and spaces.</li>
 </ol>
 
 <h2 id="logistics">Supervised Learning<br>

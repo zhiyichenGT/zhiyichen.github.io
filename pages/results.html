@@ -68,6 +68,26 @@ title: Results
 <h3 id="logistics">Latent Dirichlet Allocation (LDA) using Tomotopy<br>
 </h3>
 
+<p>
+    To uncover the inherent topics of our tweets, we apply Latent Dirichlet Allocation (LDA). This algorithm assumes that the documents observed, namely the tweets in our case, are generated based on two Dirichlet distributions. The first distribution models the probability of a given document being about a certain topic. The second one models the probability of each word given a certain topic. To optimize the LDA algorithm, Gibbs or Variational Bayes (VB) sampling is applied and tries to associate both each document and each word to as few (ideally one) topics as possible.
+</p>
+
+<p>
+    There are two popular libraries that implement LDA: <a href=”https://radimrehurek.com/gensim/models/ldamodel.html”>gensim</a> and <a href="https://bab2min.github.io/tomotopy/v0.11.1/en/#tomotopy.LDAModel">tomotopy</a>. Tomotopy uses Collapsed Gibbs-Sampling(CGS) to infer the distribution of topics and the distribution of words. Generally CGS converges more slowly than Variational Bayes (VB) that Gensim’s LdaModel uses, but its iteration can be computed much faster. In addition, Tomotopy can take advantage of multicore CPUs with a SIMD instruction set, which can result in faster iterations. An example comparison shows that on a dataset consists of 1000 random documents from English Wikipedia with 1,506,966 words (about 10.1 MB). Tomotopy trains 200 iterations and Gensim trains 10 iterations. As a result, we decided to use Tomotopy’s LDA and fine-tune it.
+</p>
+
+<p>
+    To fine-tune our model, we applied grid search on the number of topics, alpha (hyper-parameter for the document-topic Dirichlet distribution), and beta (hyper-parameter for the topics-word Dirichlet distribution). The number of topics ranges from 2 to 20, with a step size of 2. And both alpha and beta range from 0.01 to 0.91, with a step size of 0.1. To evaluate the results, we use Coherence Score, as shown below:
+</p>
+
+<img src="../static/img/sorted_lda_coherence_results.png" alt="LDA Coherence Result" class="center">
+
+<p>
+    The model performs the best when the number of topics is set to 20. And for each topics, we have provided the top-10 most relevant words:
+</p>
+
+<img src="../static/img/lda_topic_words.png" alt="LDA Topic Words" class="center">
+
 <object data="../static/embed/ldavis.html" class="object"></object>
 
 <h3 id="logistics">Next Step: GSDMM (Gibbs Sampling algorithm for a Dirichlet Mixture Model)<br>

@@ -1,0 +1,66 @@
+---
+layout: page
+title: Results
+---
+<h1 id="logistics">Results<br>
+</h1>
+
+<h2 id="logistics">Exploratory Data Analysis (EDA)<br>
+</h2>
+
+<p>
+    For the CVT dataset, we removed rows with any cell value that is inconsistent with the column name. For example, there are entries whose value for the <i>user_verified</i> column is neither <i>True</i> nor <i>False</i> but a random string.
+</p>
+<p>
+    Furthermore, we fixed the inconsistency in the format of DateTime values in the <i>date</i> column and expanded the list of hashtags into multiple attributes.
+</p>
+<p>
+    As mentioned earlier, we use data collected up until 2/28 23:59:00. Among all these data, the majority of data is generated in January and February 2021, with over 50000 tweets for each of the two months. For the rest of the months, the tweet counts range from less than 5000 to around 15000.
+</p>
+<p>
+    Hashtag-wise, aside from the hashtag <i>#CovidVaccine</i>, most tweets have 0 or 1 other hashtags, as shown below.
+</p>
+
+<h2 id="logistics">Data Preprocessing<br>
+</h2>
+<p>
+    To prepare our tweets data for training, we have established a series of preprocessing procedures:
+</p>
+<ol>
+    <li>Hyperlink Removal</li>
+    <li>HTML Stripping</li>
+    <li>Hashtag Removal</li>
+    <li>Punctuation Removal</li>
+    <li>Lowercasing</li>
+    <li>Extra Newline Removal</li>
+    <li>Contraction Expansion</li>
+    <li>Mis-spelled Word Fix</li>
+    <li>Emoticon Replacement</li>
+    <li>Emoji Replacement</li>
+    <li>Stopword Removal</li>
+    <li>Special Character Pattern Removal</li>
+    <li>Special Character Removal</li>
+</ol>
+
+<h2 id="logistics">Supervised Learning<br>
+</h2>
+
+<h3 id="logistics">Dictionary-based Sentiment Analysis<br>
+</h3>
+
+<h3 id="logistics">Neural Network-based Sentiment Analysis<br>
+</h3>
+
+<h2 id="logistics">Unsupervised Learning<br>
+</h2>
+
+<h3 id="logistics">Latent Dirichlet Allocation (LDA) using Tomotopy<br>
+</h3>
+
+<h3 id="logistics">Next Step: GSDMM (Gibbs Sampling algorithm for a Dirichlet Mixture Model)<br>
+</h3>
+
+<p>
+    During our background research on topic modeling for social media text, we found that GSDMM could be more effective on shorter text such as social media posts and comments. Though we do see some interesting topics uncovered by LDA, we still plan to apply GSDMM on the tweets and see what kind of topics are formed.
+</p>
+

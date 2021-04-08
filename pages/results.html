@@ -12,25 +12,27 @@ title: Results
     For the CVT dataset, we removed rows with any cell value that is inconsistent with the column name. For example, there are entries whose value for the <i>user_verified</i> column is neither <i>True</i> nor <i>False</i> but a random string as shown below.
 </p>
 
-<img src="../static/img/raw_covidvaccine.png" alt="Raw CVT Dataset" class="center">
+<img src="../static/img/raw_covidvaccine.png" alt="Raw CVT Dataset" width="100%>
 
 <p>
     Furthermore, we fixed the inconsistency in the format of DateTime values in the <i>date</i> column and expanded the list of hashtags into multiple attributes.
 </p>
 
-<img src="../static/img/covidvaccine.png" alt="CVT Dataset" class="center">
+<img src="../static/img/covidvaccine.png" alt="CVT Dataset" width="100%>
 
 <p>
     As mentioned earlier, we use data collected up until 2/28 23:59:00. Among all these data, the majority of data is generated in January and February 2021, with over 50000 tweets for each of the two months. For the rest of the months, the tweet counts range from less than 5000 to around 15000.
 </p>
-
-<img src="../static/img/tweet_count_by_month.png" alt="Tweet Count By Month" class="center">
-
+<center>
+<img src="../static/img/tweet_count_by_month.png" alt="Tweet Count By Month" width="60%">
+</center>
 <p>
     Hashtag-wise, aside from the hashtag <i>#CovidVaccine</i>, most tweets have 0 or 1 other hashtags, as shown below.
 </p>
+<center>
+    <img src="../static/img/tweet_count_by_number_of_hashtag.png" alt="Tweet Count by Number of Hashtags" width="60%">
+</center>
 
-<img src="../static/img/tweet_count_by_number_of_hashtag.png" alt="Tweet Count by Number of Hashtags" class="center">
 
 <h2 id="logistics">Data Preprocessing<br>
 </h2>
@@ -79,16 +81,19 @@ title: Results
 <p>
     To fine-tune our model, we applied grid search on the number of topics, alpha (hyper-parameter for the document-topic Dirichlet distribution), and beta (hyper-parameter for the topics-word Dirichlet distribution). The number of topics ranges from 2 to 20, with a step size of 2. And both alpha and beta range from 0.01 to 0.91, with a step size of 0.1. To evaluate the results, we use Coherence Score, as shown below:
 </p>
-
-<img src="../static/img/sorted_lda_coherence_results.png" alt="LDA Coherence Result" class="center">
-
+<center>
+<img src="../static/img/sorted_lda_coherence_results.png" alt="LDA Coherence Result" width="50%">
+</center>
 <p>
     The model performs the best when the number of topics is set to 20. And for each topics, we have provided the top-10 most relevant words:
 </p>
 
-<img src="../static/img/lda_topic_words.png" alt="LDA Topic Words" class="center">
+<img src="../static/img/lda_topic_words.png" alt="LDA Topic Words" width="100%">
 
-<object data="../static/embed/ldavis.html" class="object"></object>
+<center>
+<button type="button" onclick="window.open('../static/embed/ldavis.html','_blank')">Click to visualize LDA result !</button>
+</center>
+
 
 <h3 id="logistics">Next Step: GSDMM (Gibbs Sampling algorithm for a Dirichlet Mixture Model)<br>
 </h3>

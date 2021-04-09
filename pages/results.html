@@ -1,0 +1,148 @@
+---
+layout: page
+title: Results
+---
+<h1 id="logistics">Results<br>
+</h1>
+
+<h2 id="logistics">Exploratory Data Analysis (EDA)<br>
+</h2>
+
+<p>
+    For the CVT dataset, we removed rows with any cell value that is inconsistent with the column name. For example, there are entries whose value for the <i>user_verified</i> column is neither <i>True</i> nor <i>False</i> but a random string as shown below.
+</p>
+
+<img src="../static/img/raw_covidvaccine.png" alt="Raw CVT Dataset" width="100%">
+
+<p>
+    Furthermore, we fixed the inconsistency in the format of DateTime values in the <i>date</i> column and expanded the list of hashtags into multiple attributes.
+</p>
+
+<img src="../static/img/covidvaccine.png" alt="CVT Dataset" width="100%">
+
+<p>
+    As mentioned earlier, we use data collected up until 2/28 23:59:00. Among all these data, the majority of data is generated in January and February 2021, with over 50000 tweets for each of the two months. For the rest of the months, the tweet counts range from less than 5000 to around 15000.
+</p>
+<center>
+<img src="../static/img/tweet_count_by_month.png" alt="Tweet Count By Month" width="60%">
+</center>
+<p>
+    Hashtag-wise, aside from the hashtag <i>#CovidVaccine</i>, most tweets have 0 or 1 other hashtags, as shown below.
+</p>
+<center>
+    <img src="../static/img/tweet_count_by_number_of_hashtag.png" alt="Tweet Count by Number of Hashtags" width="60%">
+</center>
+
+
+<h2 id="logistics">Data Preprocessing<br>
+</h2>
+<p>
+    To prepare our tweets data for training, we have established a series of preprocessing procedures:
+</p>
+<ol>
+    <li><b>Hyperlink Removal</b>: Remove any hyperlink/URL in the tweet.</li>
+    <li><b>HTML Stripping</b>: Strip off any HTML tag and header.</li>
+    <li><b>Hashtag Removal</b>: Identify hashtags and either (1) remove the entire hashtag or (2) keep it by removing only the <i>#</i>.</li>
+    <li><b>Punctuation Removal</b>: Remove all periods, commas, question marks, exclamation marks, colons, semi-colons, hyphens, and equal signs.</li>
+    <li><b>Lowercasing</b>: Convert all letters to lowercase.</li>
+    <li><b>Extra Newline Removal</b>: Remove any newline escape character (e.g. <i>\n</i> and <i>\t</i>).</li>
+    <li><b>Contraction Expansion</b>: Use a pre-defined mapping to expand the contractions.</li>
+    <li><b>Mis-spelled Word Fix</b>: Fix words that contain at least 3 repeated consecutive letter (since no words would contain letters repeating more than 2 times consecutively).</li>
+    <li><b>Emoticon Replacement</b>: Use a pre-defined mapping to replace emotions to their names.</li>
+    <li><b>Emoji Replacement</b>: Replace emojis with their names using <a href="https://pypi.org/project/emoji/"emoji</a> library.</li>
+    <li><b>Stopword Removal</b>: Remove stopwords defined by <a href="https://www.nltk.org/">NLTK</a> library.</li>
+    <li><b>Special Character Pattern Removal</b>: Remove any complete pairs of parentheses, brackets, and braces.</li>
+    <li><b>Special Character Removal</b>: Keep only alphabetical and numeric characters and spaces.</li>
+</ol>
+
+<h2 id="logistics">Supervised Learning<br>
+</h2>
+
+<h3 id="logistics">Dictionary-based Sentiment Analysis<br>
+    We calculated the sentiment scores using the VADER (Valence Aware Dictionary for Sentiment Reasoning) python library to analyze the sentiment of tweets. VADER, a lexicon and rule-based sentiment analysis, is specifically used for sentiment analysis in social media, so it is a good choice for us to analyze tweets. 
+First, we created a VADER analyzer using the python library. VADER analyzer can calculate the negative, neutral, positive sentiment and a combination of these scores. The range of the first three scores is from 0 to 1, and the range of the combination is from -1 to +1. The combination score indicates negative sentiment with a negative value, positive sentiment with a positive value and neutral sentiment with a around zero value. After preprocessing the CVT dataset, we got the text of tweets to analyze. The results are shown below:
+<center>
+    <img src="../static/img/Vader_result.png" alt="Vader result analysis" width="60%">
+</center>
+<h4> Next Step <br>
+    Next step we will use SentiWords to analyze sentiment on the tweets. We will use different sentiment dictionaries to calculate sentiment scores and compare their results for future purpose.
+</h4>
+</h3>
+
+<h3 id="logistics">Neural Network-based Sentiment Analysis<br>
+</h3>
+
+<h4 id="logistics">Sentiment Analysis on Stanford Sentiment Treeback<br>
+</h4>
+
+<p>
+    In this project, Covid Vaccine Tweets (CVT) dataset is unlabeled, while Stanford Sentiment Treeback (SST) dataset is a mature benchmark for sentiment analysis with well labeled data. So for the first part of the supervised learning, we implement three deep learning baselines: 1. Bi-directional LSTM without pretrained word embedding (denoted as Vanilla LSTM), 2. Bi-directional LSTM with Global Vectors for Word Representation (GLOVE) as pretrained word embedding (denoted as GLOVE LSTM), 3. fine-tuned Bidirectional Encoder Representations from Transformers (denoted as BERT) on SST dataset. The details about the three baselines are referred to Methods page.
+</p>
+
+<p>
+    We strictly follow the protocol of supervised learning: we select the hyper-paramater based on the performance on validation set firstly, and then, the final results of test set is reported when the model achieves best validation performance under the selected hyper-parameter. The performance is averaged over 5 runs. 
+</p>
+
+<h5 id="logistics">Hyper-parameter Selection<br>
+</h5>
+
+<p>
+    For the reason that SST dataset is well prepared that the training set, validation set and test set are clearly divided, so we do not implement cross-validation here. In addition, for the reason that BERT uses Adam optimizer which has a general optimal learning rate, we only select "learning rate" for Vanilla LSTM and GLOVE LSTM.
+</p>
+
+<p>
+    From the results, we select "0.1" as the learning rate for Vanilla LSTM and GLOVE LSTM.
+</p>
+
+<h5 id="logistics">Accuracy and F1-score on SST<br>
+</h5>
+
+<p>
+    We use average accuracy and F1-score as two metrics to judge the performance of different ML models. The results are reported below.
+</p>
+
+<p>
+    Using Global Vectors for Word Representation (GLOVE) as pre-trained embedding obtains much better performances than Vanilla LSTM. The reason is that our dataset is much smaller than the dataset GLOVE used, so GLOVE makes more advantages from data. In addition, GLOVE is produced by global log-bilinear regression model based on co-occurrence matrix, which is not just learning through the backward propagation of neural network. As a result, GLOVE represents the words better, which contributes to better model performance. 
+</p>
+
+<p>
+    However, BERT achieves the best performance comparing to two LSTM-based methods. The reason is that BERT uses multi-layer Transformers with attention, which makes the distance of all possible pairs becomes 1 in order to solve the problem of "long dependency". In addition, because of the fine-tune technique, not only we can use the architecture of BERT, but also uses the learnt word embeddings (network parameters). So we both save a lot of time of training a big network, but also get the best performance on SST. 
+</p>
+
+<h2 id="logistics">Unsupervised Learning<br>
+</h2>
+
+<h3 id="logistics">Latent Dirichlet Allocation (LDA) using Tomotopy<br>
+</h3>
+
+<p>
+    To uncover the inherent topics of our tweets, we apply Latent Dirichlet Allocation (LDA). This algorithm assumes that the documents observed, namely the tweets in our case, are generated based on two Dirichlet distributions. The first distribution models the probability of a given document being about a certain topic. The second one models the probability of each word given a certain topic. To optimize the LDA algorithm, Gibbs or Variational Bayes (VB) sampling is applied and tries to associate both each document and each word to as few (ideally one) topics as possible.
+</p>
+
+<p>
+    There are two popular libraries that implement LDA: <a href="https://radimrehurek.com/gensim/models/ldamodel.html">gensim</a> and <a href="https://bab2min.github.io/tomotopy/v0.11.1/en/#tomotopy.LDAModel">tomotopy</a>. Tomotopy uses Collapsed Gibbs-Sampling(CGS) to infer the distribution of topics and the distribution of words. Generally CGS converges more slowly than Variational Bayes (VB) that Gensim’s LdaModel uses, but its iteration can be computed much faster. In addition, Tomotopy can take advantage of multicore CPUs with a SIMD instruction set, which can result in faster iterations. An example comparison shows that on a dataset consists of 1000 random documents from English Wikipedia with 1,506,966 words (about 10.1 MB). Tomotopy trains 200 iterations and Gensim trains 10 iterations. As a result, we decided to use Tomotopy’s LDA and fine-tune it.
+</p>
+
+<p>
+    To fine-tune our model, we applied grid search on the number of topics, alpha (hyper-parameter for the document-topic Dirichlet distribution), and beta (hyper-parameter for the topics-word Dirichlet distribution). The number of topics ranges from 2 to 20, with a step size of 2. And both alpha and beta range from 0.01 to 0.91, with a step size of 0.1. To evaluate the results, we use Coherence Score, as shown below:
+</p>
+<center>
+<img src="../static/img/sorted_lda_coherence_results.png" alt="LDA Coherence Result" width="50%">
+</center>
+<p>
+    The model performs the best when the number of topics is set to 20. And for each topics, we have provided the top-10 most relevant words:
+</p>
+
+<img src="../static/img/lda_topic_words.png" alt="LDA Topic Words" width="100%">
+
+<center>
+<button type="button" onclick="window.open('../static/embed/ldavis.html','_blank')">Click me to visualize LDA result !</button>
+</center>
+
+<h3 id="logistics">Next Step: GSDMM (Gibbs Sampling algorithm for a Dirichlet Mixture Model)<br>
+</h3>
+
+<p>
+    During our background research on topic modeling for social media text, we found that GSDMM could be more effective on shorter text such as social media posts and comments. Though we do see some interesting topics uncovered by LDA, we still plan to apply GSDMM on the tweets and see what kind of topics are formed.
+</p>
+

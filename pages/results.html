@@ -61,6 +61,25 @@ title: Results
 <h3 id="logistics">Dictionary-based Sentiment Analysis<br>
 </h3>
 
+<p>
+    We calculated the sentiment scores using the VADER (Valence Aware Dictionary for Sentiment Reasoning) python library to analyze the sentiment of tweets. VADER, a lexicon and rule-based sentiment analysis, is specifically used for sentiment analysis in social media, so it is a good choice for us to analyze tweets. 
+</p>
+
+<p>
+    First, we created a VADER analyzer using the python library. VADER analyzer can calculate the negative, neutral, positive sentiment and a combination of these scores. The range of the first three scores is from 0 to 1, and the range of the combination is from -1 to +1. The combination score indicates negative sentiment with a negative value, positive sentiment with a positive value and neutral sentiment with a around zero value. After preprocessing the CVT dataset, we got the text of tweets to analyze. The results are shown below:
+</p>
+
+<center>
+<img src="../static/img/VADER.png">
+</center>
+
+<h3 id="logistics">Next Step: SentiWords<br>
+</h3>
+
+<p>
+    Next step we will use SentiWords to analyze sentiment on the tweets. We will use different sentiment dictionaries to calculate sentiment scores and compare their results for future purpose.
+</p>
+
 <h3 id="logistics">Neural Network-based Sentiment Analysis<br>
 </h3>
 

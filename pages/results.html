@@ -63,16 +63,6 @@ title: Results
 </h2>
 
 <h3 id="logistics">Dictionary-based Sentiment Analysis<br>
-
-    We calculated the sentiment scores using the VADER (Valence Aware Dictionary for Sentiment Reasoning) python library to analyze the sentiment of tweets. VADER, a lexicon and rule-based sentiment analysis, is specifically used for sentiment analysis in social media, so it is a good choice for us to analyze tweets. 
-First, we created a VADER analyzer using the python library. VADER analyzer can calculate the negative, neutral, positive sentiment and a combination of these scores. The range of the first three scores is from 0 to 1, and the range of the combination is from -1 to +1. The combination score indicates negative sentiment with a negative value, positive sentiment with a positive value and neutral sentiment with a around zero value. After preprocessing the CVT dataset, we got the text of tweets to analyze. The results are shown below:
-<center>
-    <img src="../static/img/Vader_result.png" alt="Vader result analysis" width="60%">
-</center>
-<h4> Next Step <br>
-    Next step we will use SentiWords to analyze sentiment on the tweets. We will use different sentiment dictionaries to calculate sentiment scores and compare their results for future purpose.
-</h4>
-
 </h3>
 
 <p>
@@ -112,8 +102,7 @@ First, we created a VADER analyzer using the python library. VADER analyzer can 
 </h5>
 
 <p>
-<<<<<<< HEAD
-    For the reason that SST dataset is well prepared that the training set, validation set and test set are clearly divided, so we do not implement cross-validation here. In addition, from the original paper of BERT, we choose to select the learning rate of BERT from " 5e-5、3e-5、2e-5" and batch size from "16, 32". For two LSTM based motheds, we choose learning rate from "0.1, 0.05, 0.01" and batch size from "16, 32".
+    For the reason that SST dataset is well prepared that the training set, validation set and test set are clearly divided, so we do not implement cross-validation here. In addition, from the original paper of BERT, we choose to select the learning rate of BERT from " 5e-5、3e-5、2e-5" and batch size from "16, 32". For two LSTM based methods, we choose learning rate from "0.1, 0.05, 0.01" and batch size from "16, 32".
 </p>
 
 <p>
@@ -128,7 +117,7 @@ First, we created a VADER analyzer using the python library. VADER analyzer can 
 </p>
 
 <center>
-    <img src="../static/img/SST_baselines.png" alt="Performance of three baselines on SST" width="50%">
+    <img src="../static/img/SST_baselines.png" alt="Performance of three baselines on SST" width="40%">
 </center>
 
 <p>
@@ -136,7 +125,7 @@ First, we created a VADER analyzer using the python library. VADER analyzer can 
 </p>
 
 <p>
-    However, BERT achieves the best performance comparing to two LSTM-based methods. The reason is that BERT uses multi-layer Transformers with attention, which makes the distance of all possible pairs becomes 1 in order to solve the problem of "Long-Term Dependencies". In addition, because of the fine-tune technique, not only we can use the architecture of BERT, but also uses the learnt word embeddings (network parameters). So we both save a lot of time of training a big network, but also get the best performance on SST. 
+    However, BERT achieves the best performance comparing to two LSTM-based methods. The reason is that BERT uses multi-layer Transformers with attention, which makes the distance of all possible pairs becomes 1 in order to solve the problem of "Long-Term Dependencies" better than LSTMs (RNN based models). In addition, because of the fine-tune technique, not only we can use the architecture of BERT, but also use the learnt word embeddings (network parameters). So we save a lot of time of training a big network and get the best performance on SST as well. 
 </p>
 
 <h2 id="logistics">Unsupervised Learning<br>

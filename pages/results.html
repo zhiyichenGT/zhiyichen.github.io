@@ -64,6 +64,43 @@ title: Results
 <h3 id="logistics">Neural Network-based Sentiment Analysis<br>
 </h3>
 
+<h4 id="logistics">Sentiment Analysis on Stanford Sentiment Treeback<br>
+</h4>
+
+<p>
+    In this project, Covid Vaccine Tweets (CVT) dataset is unlabeled, while Stanford Sentiment Treeback (SST) dataset is a mature benchmark for sentiment analysis with well labeled data. So for the first part of the supervised learning, we implement three deep learning baselines: 1. Bi-directional LSTM without pretrained word embedding (denoted as Vanilla LSTM), 2. Bi-directional LSTM with Global Vectors for Word Representation (GLOVE) as pretrained word embedding (denoted as GLOVE LSTM), 3. fine-tuned Bidirectional Encoder Representations from Transformers (denoted as BERT) on SST dataset. The details about the three baselines are referred to Methods page.
+</p>
+
+<p>
+    We strictly follow the protocol of supervised learning: we select the hyper-paramater based on the performance on validation set firstly, and then, the final results of test set is reported when the model achieves best validation performance under the selected hyper-parameter. The performance is averaged over 5 runs. 
+</p>
+
+<h5 id="logistics">Hyper-parameter Selection<br>
+</h5>
+
+<p>
+    For the reason that SST dataset is well prepared that the training set, validation set and test set are clearly divided, so we do not implement cross-validation here. In addition, for the reason that BERT uses Adam optimizer which has a general optimal learning rate, we only select "learning rate" for Vanilla LSTM and GLOVE LSTM.
+</p>
+
+<p>
+    From the results, we select "0.1" as the learning rate for Vanilla LSTM and GLOVE LSTM.
+</p>
+
+<h5 id="logistics">Accuracy and F1-score on SST<br>
+</h5>
+
+<p>
+    We use average accuracy and F1-score as two metrics to judge the performance of different ML models. The results are reported below.
+</p>
+
+<p>
+    Using Global Vectors for Word Representation (GLOVE) as pre-trained embedding obtains much better performances than Vanilla LSTM. The reason is that our dataset is much smaller than the dataset GLOVE used, so GLOVE makes more advantages from data. In addition, GLOVE is produced by global log-bilinear regression model based on co-occurrence matrix, which is not just learning through the backward propagation of neural network. As a result, GLOVE represents the words better, which contributes to better model performance. 
+</p>
+
+<p>
+    However, BERT achieves the best performance comparing to two LSTM-based methods. The reason is that BERT uses multi-layer Transformers with attention, which makes the distance of all possible pairs becomes 1 in order to solve the problem of "long dependency". In addition, because of the fine-tune technique, not only we can use the architecture of BERT, but also uses the learnt word embeddings (network parameters). So we both save a lot of time of training a big network, but also get the best performance on SST. 
+</p>
+
 <h2 id="logistics">Unsupervised Learning<br>
 </h2>
 

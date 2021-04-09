@@ -122,7 +122,7 @@ title: Results
 <img src="../static/img/sorted_lda_coherence_results.png" alt="LDA Coherence Result" width="50%">
 </center>
 <p>
-    The model performs the best when the number of topics is set to 20. And for each topics, we have provided the top-10 most relevant words:
+    We evaluate the model using two types of coherence score: CV coherence score and the UMass coherence score. The former ranges from 0 to 1 and the latter ranges from -14 to 14. Both measure how well each topic (clusters) is by comparing the inter-topic relevance and intra-topic relevance. The higher the values the better. However, we found that when evaluating using the UMass coherence score, the highest scores are mostly achieved by having very few topics such as 2. As a result, we decided to use the CV coherence score as our primary metric to determine the best sets of hyper-parameters. The model performs the best when the number of topics is set to 20. And for each topics, we have provided the top-10 most relevant words:
 </p>
 
 <img src="../static/img/lda_topic_words.png" alt="LDA Topic Words" width="100%">

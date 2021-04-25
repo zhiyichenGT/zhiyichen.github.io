@@ -146,7 +146,7 @@ title: Results
     To fine-tune our model, we applied grid search on the number of topics, alpha (hyper-parameter for the document-topic Dirichlet distribution), and beta (hyper-parameter for the topics-word Dirichlet distribution). The number of topics ranges from 2 to 20, with a step size of 2. And both alpha and beta range from 0.01 to 0.91, with a step size of 0.1. To evaluate the results, we use Coherence Score, as shown below:
 </p>
 <center>
-<img src="../static/img/sorted_lda_coherence_results.png" alt="LDA Coherence Result" width="50%">
+<img src="../static/img/sorted_lda_coherence.png" alt="LDA Coherence Result" width="50%">
 </center>
 <p>
     We evaluate the model using two types of coherence score: CV coherence score and the UMass coherence score. The former ranges from 0 to 1 and the latter ranges from -14 to 14. Both measure how well each topic (clusters) is by comparing the inter-topic relevance and intra-topic relevance. The higher the values the better. However, we found that when evaluating using the UMass coherence score, the highest scores are mostly achieved by having very few topics such as 2. As a result, we decided to use the CV coherence score as our primary metric to determine the best sets of hyper-parameters. The model performs the best when the number of topics is set to 20. And for each topics, we have provided the top-10 most relevant words:
@@ -154,9 +154,10 @@ title: Results
 
 <img src="../static/img/lda_topic_words.png" alt="LDA Topic Words" width="100%">
 
-<center>
-<button type="button" onclick="window.open('../static/embed/ldavis.html','_blank')">Click me to visualize LDA result !</button>
-</center>
+<p>
+    We visualize the the relative importance of the topic words using word cloud:
+</p>
+<img src="../static/img/lda_wordcloud.png" alt="LDA word cloud" width="100%">
 
 <p>
     As expected, the majority of Twitter users use the hashtag #CovidVaccine to talk about the latest progress in vaccine development or their experience in getting the shots. As we see in Topic #8 and Topic #18, they include the majority of words (meaning most of the content using these words are talking about vaccine development progress. Some keywords include "take", "get", "first", "dose", "covidvaccin", "pfizer", etc.
@@ -166,10 +167,24 @@ title: Results
     However, we also found a few other interesting topics. Topic #2 revolves machine learning, deep learning, artificial intelligence. We’re guessing the topic is mainly about how to use big data to perform contact tracing and to slow the spread of the virus. Topic #7 is about the significant progress on vaccine development in Bangladesh and Topic #10 talks about Sheikh Hasina, president of Bangladesh, helping make the vaccine more accessible to Bangladeshis. Topic #19 discusses the postponement of the 2020 Summer Olympics at Tokyo, Japan. We sometimes discovered new topics when we re-ran LDA on the tweets data. For example, we have found topics talking about Apple’s stock price and MarketSmith, a stock research and investment tool.
 </p>
 
-<h3 id="logistics">Next Step: GSDMM (Gibbs Sampling algorithm for a Dirichlet Mixture Model)<br>
+<h3 id="logistics">Hierarchical Dirichlet Process (HDP) using Tomotopy<br>
 </h3>
+Tweet topics are intrinsically hierarchical, so we further apply Hierarchical Dirichlet Process (HDP).
+
 
 <p>
-    During our background research on topic modeling for social media text, we found that GSDMM could be more effective on shorter text such as social media posts and comments. Though we do see some interesting topics uncovered by LDA, we still plan to apply GSDMM on the tweets and see what kind of topics are formed.
+    To fine-tune our model, we again applied grid search on the number of topics, alpha (hyper-parameter for the document-topic Dirichlet distribution), and beta (hyper-parameter for the topics-word Dirichlet distribution). The number of topics ranges from 2 to 20, with a step size of 2. And both alpha and beta range from 0.01 to 0.91, with a step size of 0.1. To evaluate the results, we use Coherence Score, as shown below:
 </p>
+<center>
+    <img src="../static/img/sorted_hdp_coherence.png" alt="HDP Coherence Result" width="50%">
+</center>
 
+<p>
+    The topic words are:
+</p>
+<center>
+    <img src="../static/img/hdp_topic_words.png" alt="HDP topic words" width="100%">
+</center>
+<center>
+    <img src="../static/img/hdp_wordcloud.png" alt="HDP word cloud" width="100%">
+</center>

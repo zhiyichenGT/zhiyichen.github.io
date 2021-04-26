@@ -128,6 +128,55 @@ title: Results
     However, BERT achieves the best performance comparing to two LSTM-based methods. The reason is that BERT uses multi-layer Transformers with attention, which makes the distance of all possible pairs becomes 1 in order to solve the problem of "Long-Term Dependencies" better than LSTMs (RNN based models). In addition, because of the fine-tune technique, not only we can use the architecture of BERT, but also use the learnt word embeddings (network parameters). So we save a lot of time of training a big network and get the best performance on SST as well. 
 </p>
 
+<h4 id="logistics">Sentiment Analysis on Stanford Sentiment Treeback<br>
+</h4>
+
+<p>
+    From the first part of the supervised learning, we have observed that BERT performs best among three baselines on SST dataset, while using GLOVE pretrained embedding can improve the accuracy of vanilla model. So for the second part, we focus on Covid Vaccine Tweets (CVT) dataset and try to figure out how these three baselines perform on this bigger dataset.
+</p>
+
+<p>
+    For the reason that CVT is unlabeled, we try to label the sentimental score based on two sentiment dictionary: Vader and SentimentWord. Here we only use Vader-based labels. And because CVT dataset is too big, we only go through it with one run.
+</p>
+
+<h5 id="logistics">Accuracy and F1-score on CVT<br>
+</h5>
+
+<p>
+    We also use average accuracy and F1-score to judge the performance. The results are reported below.
+</p>
+
+<center>
+    <img src="../static/img/CVT_baselines.png" alt="Performance of three baselines on CVT" width="40%">
+</center>
+
+<p>
+    From the results, we can observe that the gap between BERT and GLOVE LSTM on CVT is much smaller than on SST. The reason is that the amount of data in CVT is almost 12 times of SST, which can take full advantage of the fitting ability of neural network. 
+</p>
+
+<p>
+    In addition, GLOVE LSTM and BERT are better than vanilla LSTM, which indicates that good word embedding is very important in NLP.
+</p>
+
+<h5 id="logistics">Performance of the CVT-model on SST<br>
+</h5>
+
+<p>
+    There are 98900 examples in the training set of CVT dataset, while the training set of SST only contains 8121 examples. So we want to see how a model which is trained on CVT dataset performs in SST dataset. Here the domains of label on two datasets are both {0, 1, 2} (Negative, Neutral, Positive). However, only BERT model can be directly tested on different dataset, because the domain of training data (X) is based on BertTokenizer, which ensures the same domain of two datasets. While for the other two LSTM-based models, the domain of X is tokenized only based on the training set, so domain is different. Here we only make observation on BERT model.
+</p>
+
+<center>
+    <img src="../static/img/CVT_SST.png" alt="Performance of CVT-SST" width="40%">
+</center>
+
+<p>
+    There is an obvious gap between the performances of BERT-CVT on test set of the two datasets. The reason is that the sentences of CVT are all about Covid19 Vaccine on tweeter, however, sentences of SST are reviews of films, which are very different on data domains. 
+</p>
+
+<p>
+    For the future work, if we need to deal with the problem like this, we should use transfer learning and domain adaptation to mitigate the gap between the domain of X, which is a covariate shift.
+</p>
+
 <h2 id="logistics">Unsupervised Learning<br>
 </h2>
 

@@ -4,7 +4,7 @@
 
 Office: Klaus Advanced Computer Building, room 3319
 
-Email: zchen798 AT gatech DOT edu
+Email: zchen798 AT gatech DOT edu<img src="D:\陈质祎\2021Fall\image\image.jpg" alt="image" style="zoom: 25%;" />
 
 ### About Me
 
@@ -26,7 +26,7 @@ June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampl
 
 ### Publications
 
-**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**
+**[Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning]([Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning | SpringerLink](https://link.springer.com/chapter/10.1007/978-3-030-86340-1_34))**
 
 **Zhiyi Chen**, Tong Lin*,  ICANN 2021
 

@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+## Zhiyi Chen
 
-You can use the [editor on GitHub](https://github.com/zhiyichenGT/zhiyichen.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+**Ph.D. Student**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Office: Klaus Advanced Computer Building, room 3319
 
-### Markdown
+Email: zchen798 AT gatech DOT edu
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### About Me
 
-```markdown
-Syntax highlighted code block
+I am a first year PhD Student in Computer Science at Georgia tech, advised by Alberto Dainotti. I am interested in intersection of machine learning and Internet. I currently work on classifying Autonomous Systems to provide a better understanding to the Internet ecosystem. Before joining Georgia Tech, I received my Bachelor degree in Department of Computer Science and Technology, Tsinghua University in 2020.
 
-# Header 1
-## Header 2
-### Header 3
+### Research Interests
 
-- Bulleted
-- List
+Application of machine learning in data science
 
-1. Numbered
-2. List
+Internet measurement
 
-**Bold** and _Italic_ and `Code` text
+Cybersecurity
 
-[Link](url) and ![Image](src)
-```
+### News
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Aug, 2021: I joined Georgia Tech as a PhD student.
 
-### Jekyll Themes
+June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* is accepted at 30th International Conference on Artificial Neural Networks (ICANN 2021).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zhiyichenGT/zhiyichen.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Publications
 
-### Support or Contact
+**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+**Zhiyi Chen**, Tong Lin*,  ICANN 2021
+

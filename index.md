@@ -27,7 +27,7 @@ Cybersecurity
 
 ### News
 
-Aug, 2021: I joined Georgia Tech as a PhD student.
+Aug, 2021: I joined Georgia Tech as a Ph.D. student.
 
 June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* is accepted at 30th International Conference on Artificial Neural Networks (ICANN 2021).
 
@@ -36,4 +36,3 @@ June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampl
 [**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
 
 **Zhiyi Chen**, Tong Lin*,  ICANN 2021
-

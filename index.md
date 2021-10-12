@@ -33,6 +33,6 @@ June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampl
 
 ### Publications
 
-[**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
+[1] [**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
 
 **Zhiyi Chen**, Tong Lin*,  ICANN 2021

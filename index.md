@@ -15,7 +15,7 @@
 
 ### About Me
 
-I am a first year Ph.D. Student in Computer Science at Georgia tech, advised by Alberto Dainotti. I am interested in intersection of machine learning and Internet. I currently work on classifying Autonomous Systems to provide a better understanding to the Internet ecosystem. Before joining Georgia Tech, I received my Bachelor degree in Department of Computer Science and Technology, Tsinghua University in 2020.
+I am a second year Ph.D. Student in Computer Science at Georgia tech, advised by Alberto Dainotti. I am interested in intersection of machine learning and Internet. I currently work on classifying Autonomous Systems to provide a better understanding to the Internet ecosystem. Before joining Georgia Tech, I received my Bachelor degree in Department of Computer Science and Technology, Tsinghua University in 2020.
 
 ### Research Interests
 
@@ -27,9 +27,13 @@ Cybersecurity
 
 ### News
 
+Jan, 2023: My work *Improving the Inference of Sibling Autonomous Systems* was accepted by Passive and Active Measurement Conference (PAM) 2023.
+
+July, 2022: I presented a talk *Mapping ASNs to Organizations* at MapKIT Workshop 2022.
+
 Aug, 2021: I joined Georgia Tech as a Ph.D. student.
 
-June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* is accepted at 30th International Conference on Artificial Neural Networks (ICANN 2021).
+June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* was accepted at 30th International Conference on Artificial Neural Networks (ICANN 2021).
 
 ### Publications
 

@@ -4,7 +4,7 @@
   <tr>
     <td width="75%">
       <p><b>Ph.D. Student</b></p>
-      <p>Office: Klaus Advanced Computer Building, room 3319</p>
+      <p>Office: Klaus Advanced Computer Building, room 3337</p>
       <p>Email: zchen798 AT gatech DOT edu</p>
     </td>
     <td width="25%">

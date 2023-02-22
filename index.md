@@ -27,7 +27,7 @@ Cybersecurity
 
 ### News
 
-Feb, 2023: I presented a lightning talk on *Improving the Inference of Sibling Autonomous Systems* at NANOG 87 in Atlanta. The recording can be found at https://www.nanog.org/events/nanog-87/watch-n87-webcast/.
+Feb, 2023: I presented a lightning talk on *Improving the Inference of Sibling Autonomous Systems* at NANOG 87 in Atlanta. The recording can be found at https://youtu.be/AK9PpC8FX9E.
 
 Jan, 2023: My work *Improving the Inference of Sibling Autonomous Systems* was accepted by Passive and Active Measurement Conference (PAM) 2023.
 

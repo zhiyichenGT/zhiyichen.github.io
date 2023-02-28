@@ -37,10 +37,10 @@ July, 2022: I presented a talk *Mapping ASNs to Organizations* at MapKIT Worksho
 
 Aug, 2021: I joined Georgia Tech as a Ph.D. student.
 
-June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* was accepted at 30th International Conference on Artificial Neural Networks (ICANN 2021).
+June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* was accepted at 30th International Conference on Artificial Neural Networks (ICANN) 2021.
 
 ### Publications
 
 [1] [**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
 
-**Zhiyi Chen**, Tong Lin*,  ICANN 2021
+**Zhiyi Chen**, Tong Lin,  ICANN 2021

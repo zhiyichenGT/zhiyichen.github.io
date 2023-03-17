@@ -41,6 +41,10 @@ June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampl
 
 ### Publications
 
-[1] [**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
+[1] [**Improving the Inference of Sibling Autonomous Systems**](https://link.springer.com/chapter/10.1007/978-3-031-28486-1_15)
+
+**Zhiyi Chen**, Zachary S. Bischof, Cecilia Testart, Alberto Dainotti,  PAM 2023
+
+[2] [**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
 
 **Zhiyi Chen**, Tong Lin,  ICANN 2021

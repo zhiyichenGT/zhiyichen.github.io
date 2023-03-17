@@ -29,9 +29,9 @@ Cybersecurity
 
 Feb, 2023: The joint work with Peng Li on *DiffPrep: Differentiable Data Preprocessing Pipeline Search for Learning over Tabular Data* was accepted by the The ACM Special Interest Group on Management of Data (SIGMOD) 2023.
 
-Feb, 2023: I presented a lightning talk on *Improving the Inference of Sibling Autonomous Systems* at NANOG 87 in Atlanta. The recording can be found at https://youtu.be/AK9PpC8FX9E.
+Feb, 2023: I presented a lightning talk on *Improving the Inference of Sibling Autonomous Systems* at NANOG 87 in Atlanta. The recording can be found at [NANOG Talk](https://youtu.be/AK9PpC8FX9E).
 
-Jan, 2023: My work *Improving the Inference of Sibling Autonomous Systems* was accepted by the Passive and Active Measurement Conference (PAM) 2023.
+Jan, 2023: My work *Improving the Inference of Sibling Autonomous Systems* was accepted by the Passive and Active Measurement Conference (PAM) 2023. [Paper](https://link.springer.com/chapter/10.1007/978-3-031-28486-1_15) [Dataset](https://github.com/InetIntel/Improving-Inference-of-Sibling-ASes)
 
 July, 2022: I presented a talk *Mapping ASNs to Organizations* at MapKIT Workshop 2022.
 

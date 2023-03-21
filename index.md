@@ -27,6 +27,8 @@ Cybersecurity
 
 ### News
 
+Mar, 2023: I posted an APNIC Blog about my work on improving the inference of sibling Autonomous Systems. [APNIC Blog](https://blog.apnic.net/2023/03/21/improving-the-inference-of-sibling-autonomous-systems/)
+
 Feb, 2023: The joint work with Peng Li on *DiffPrep: Differentiable Data Preprocessing Pipeline Search for Learning over Tabular Data* was accepted by the The ACM Special Interest Group on Management of Data (SIGMOD) 2023.
 
 Feb, 2023: I presented a lightning talk on *Improving the Inference of Sibling Autonomous Systems* at NANOG 87 in Atlanta. The recording can be found at [NANOG Talk](https://youtu.be/AK9PpC8FX9E).

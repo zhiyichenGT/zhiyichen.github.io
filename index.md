@@ -46,7 +46,7 @@ June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampl
 
 ### Publications
 
-[1] [**Improving the Inference of Sibling Autonomous Systems**](https://link.springer.com/chapter/10.1007/978-3-031-28486-1_15)
+[1] [**Improving the Inference of Sibling Autonomous Systems**](https://github.com/zhiyichenGT/zhiyichenGT.github.io/blob/gh-pages/Improving%20the%20Inference%20of%20Sibling%20Autonomous%20Systems%20(Accepted%20Manuscript).pdf)
 
 **Zhiyi Chen**, Zachary S. Bischof, Cecilia Testart, Alberto Dainotti,  PAM 2023
 

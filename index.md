@@ -27,6 +27,8 @@ Cybersecurity
 
 ### News
 
+Jun, 2023: I started a research summer internship at Coalition, Inc.
+
 Mar, 2023: I posted an APNIC Blog about my work on improving the inference of sibling Autonomous Systems. [APNIC Blog](https://blog.apnic.net/2023/03/21/improving-the-inference-of-sibling-autonomous-systems/)
 
 Feb, 2023: The joint work with Peng Li on *DiffPrep: Differentiable Data Preprocessing Pipeline Search for Learning over Tabular Data* was accepted by the The ACM Special Interest Group on Management of Data (SIGMOD) 2023.
@@ -38,11 +40,11 @@ Jan, 2023: My work *Improving the Inference of Sibling Autonomous Systems* was a
 <!-- (This version of the contribution has been accepted for publication, after peer review (when applicable) but is not the Version of Record and does not reflect post-acceptance improvements, or any corrections. The Version of Record is available online at: [Paper](https://link.springer.com/chapter/10.1007/978-3-031-28486-1_15).) -->
 
 
-July, 2022: I presented a talk *Mapping ASNs to Organizations* at MapKIT Workshop 2022.
+Jul, 2022: I presented a talk *Mapping ASNs to Organizations* at MapKIT Workshop 2022.
 
 Aug, 2021: I joined Georgia Tech as a Ph.D. student.
 
-June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* was accepted at 30th International Conference on Artificial Neural Networks (ICANN) 2021.
+Jun, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning* was accepted at 30th International Conference on Artificial Neural Networks (ICANN) 2021.
 
 ### Publications
 
@@ -50,6 +52,10 @@ June, 2021: My work *Principal Gradient Direction and Confidence Reservoir Sampl
 
 **Zhiyi Chen**, Zachary S. Bischof, Cecilia Testart, Alberto Dainotti,  PAM 2023
 
-[2] [**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
+[2] [**DiffPrep: Differentiable Data Preprocessing Pipeline Search for Learning over Tabular Data**](https://2023.sigmod.org/)
+
+Peng Li, **Zhiyi Chen**, Xu Chu, Kexin Rong,  SIGMOD 2023
+
+[3] [**Principal Gradient Direction and Confidence Reservoir Sampling for Continual Learning**](http://link.springer.com/chapter/10.1007/978-3-030-86340-1_34)
 
 **Zhiyi Chen**, Tong Lin,  ICANN 2021

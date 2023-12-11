@@ -15,7 +15,7 @@
 
 ### About Me
 
-I am a second year Ph.D. Student in Computer Science at Georgia tech, advised by Alberto Dainotti. I am interested in intersection of machine learning and Internet. I currently work on classifying Autonomous Systems to provide a better understanding to the Internet ecosystem. Before joining Georgia Tech, I received my Bachelor degree in Department of Computer Science and Technology, Tsinghua University in 2020.
+I am a third year Ph.D. Candidate in Computer Science at Georgia Tech, advised by Prof. Alberto Dainotti. I am interested in intersection of machine learning and Internet measurement. Before joining Georgia Tech, I received my bachelor's degree in Department of Computer Science and Technology, Tsinghua University in 2020.
 
 ### Research Interests
 

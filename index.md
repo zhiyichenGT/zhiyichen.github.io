@@ -28,6 +28,8 @@ Cybersecurity
 
 ### News
 
+Jun, 2024: I started a CTG summer internship at Catchpoint Systems, Inc.
+
 Jun, 2023: I started a research summer internship at Coalition, Inc.
 
 Mar, 2023: I posted an APNIC Blog about my work on improving the inference of sibling Autonomous Systems. [APNIC Blog](https://blog.apnic.net/2023/03/21/improving-the-inference-of-sibling-autonomous-systems/)
